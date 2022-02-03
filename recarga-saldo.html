@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-body py-0 ">
+        <div class="content content-fixed p-0 m-0">
+            <div class="p-0 m-0">
+                <div class="d-sm-flex align-items-center justify-content-between my-2">
+                    <div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb breadcrumb-style1 m-0">
+                                <li data-i18n-id="ListChannels_li_home" data-view-name="Bots" class="breadcrumb-item">Inicio</li>
+                                <li data-i18n-id="li_recargaSaldo" data-view-name="recargasaldo" class="breadcrumb-item active" aria-current="page">Recarga de Saldo</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="contenedor-cantidad-platillasMensajes-disponibles" class="container">
+            <div class="contendor-cards card-body bg-white border" style="flex-wrap:wrap ; position:relative" id="setloadingview-cards">
+                <div class="d-sm-flex">
+                    <div class="media w-100" style="max-width:250px">
+                        <div class="wd-40 wd-md-40 ht-40 ht-md-45 bg-teal tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="media-body">
+                            <h6 data-i18n-id="card_h6_msjwsp_recargaSaldo" data-view-name="recargasaldo" class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5">Mensajes de Whatsapp</h6>
+                            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                                <h3 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0 position-relative" id="totalmensajes-wsp-disponibles">0</h3>
+                                <p data-i18n-id="p_msjwsp_disponibles_recargaSaldo" data-view-name="recargasaldo" class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium p-1 ">Disponibles</span> </p>
+                            </div>
+                        </div>
+                    </div> <!--card 1-->
+                    <div class="media w-100 mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40" style="max-width:250px">
+                        <div class="wd-40 wd-md-40 ht-40 ht-md-45 bg-warning tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="media-body">
+                            <h6 data-i18n-id="card_h6_sesionentrante_recargaSaldo" data-view-name="recargasaldo" class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5">Sesiones Entrantes (HSM)</h6>
+                            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                                <h3 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0 position-relative" id="totalmensajes-hsmentrantes-disponibles">0</h3>
+                                <p data-i18n-id="p_sesionentrante_disponibles_recargaSaldo" data-view-name="recargasaldo" class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium p-1 ">Disponibles</span> </p>
+                            </div>
+                        </div>
+                    </div><!--card 2-->
+                    <div class="media w-100 mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40" style="max-width:250px">
+                        <div class="wd-40 wd-md-40 ht-40 ht-md-45 bg-success tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="media-body">
+                            <h6 data-i18n-id="card_h6_sesionsaliente_recargaSaldo" data-view-name="recargasaldo" class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5">Sesiones Salientes (HSM)</h6>
+                            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                                <h3 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0 position-relative" id="totalmensajes-hsm-disponibles">0</h3>
+                                <p data-i18n-id="p_sesionsaliente_disponibles_recargaSaldo" data-view-name="recargasaldo" class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium p-1 ">Disponibles</span> </p>
+                            </div>
+                        </div>
+                    </div><!--card 3-->
+                    <div class="media w-100 mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40" style="max-width:250px">
+                        <div class="wd-40 wd-md-40 ht-40 ht-md-45 bg-info tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="media-body">
+                            <h6 data-i18n-id="card_h6_horasoporte_recargaSaldo" data-view-name="recargasaldo" class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5">Horas soporte</h6>
+                            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                                <h3 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0 position-relative" id="totalmensajes-horasSoporte-disponibles">0</h3>
+                                <p data-i18n-id="p_horassoporte_disponibles_recargaSaldo" data-view-name="recargasaldo" class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium p-1 ">Disponibles</span> </p>
+                            </div>
+                        </div>
+                    </div><!--card 4-->
+                    <div class="media w-100 mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40" style="max-width:250px">
+                        <div class="wd-40 wd-md-40 ht-40 ht-md-45 bg-danger tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="media-body">
+                            <h6 data-i18n-id="card_h6_sms_recargaSaldo" data-view-name="recargasaldo" class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5">SMS</h6>
+                            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+                                <h3 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0 position-relative" id="totalmensajes-sms-disponibles">0</h3>
+                                <p data-i18n-id="p_sms_disponibles_recargaSaldo" data-view-name="recargasaldo" class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium p-1 ">Disponibles</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container" id="container-saldo-mensajesplantillas">
+    
+    
+        </div>
+    
+        <div class="container">
+            <div id="container-alertas-compras"></div>
+    
+            <div class="mg-t-10">
+                <div class="card">
+                    <div class="card-header pd-b-2 tx-16">
+                        <h6 data-i18n-id="h6_titulotransacciones_recargaSaldo" data-view-name="recargasaldo">Adquiere las transacciones que necesitas para tu operatividad</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row mg-b-0">
+                            <label data-i18n-id="label_precios_recargaSaldo" data-view-name="recargasaldo" class="pt-2 pl-3" for="cbo-preciobasadosen-compras">Precios basados en</label>
+                            <div class="col-sm-3">
+                                <select class="form-control form-control-sm" id="cbo-preciobasadosen-compras">
+                                    <option data-i18n-id="opt_msjwsp_recargaSaldo" data-view-name="recargasaldo" value="1">Mensajes de WhatsApp</option>
+                                    <option data-i18n-id="opt_sesionesentrantes_recargaSaldo" data-view-name="recargasaldo" value="2">Sesiones Entrantes(HSM)</option>
+                                    <option data-i18n-id="opt_sesionessalientes_recargaSaldo" data-view-name="recargasaldo" value="3" selected >Sesiones Salientes (HSM)</option>
+                                    <option data-i18n-id="opt_sms_recargaSaldo" data-view-name="recargasaldo" value="4">SMS</option>
+                                    <option data-i18n-id="opt_horassoporte_recargaSaldo" data-view-name="recargasaldo"value="5">Horas de Soporte</option>
+                                </select>
+                            </div>
+    
+                            <label data-i18n-id="label_parapais_recargaSaldo" data-view-name="recargasaldo"class="pt-2 pl-3" for="cbo-paisespermitidotransacciones-compras">para</label>
+                            <div class="col-sm-3">
+                                <select class="form-control form-control-sm" id="cbo-paisespermitidotransacciones-compras">
+                                    <option data-i18n-id="opt_peru_recargaSaldo" data-view-name="recargasaldo" value="PE" selected>Perú</option>
+                                    <option data-i18n-id="opt_colombia_recargaSaldo" data-view-name="recargasaldo"value="CO">Colombia</option>
+                                    <option data-i18n-id="opt_uruguay_recargaSaldo" data-view-name="recargasaldo" value="UY">Uruguay</option>
+                                    <option data-i18n-id="opt_paraguay_recargaSaldo" data-view-name="recargasaldo"value="PY">Paraguay</option>
+                                    <option data-i18n-id="opt_espana_recargaSaldo" data-view-name="recargasaldo"value="ES">España</option>
+                                    <option data-i18n-id="opt_chile_recargaSaldo" data-view-name="recargasaldo"value="CL">Chile</option>
+                                    <option data-i18n-id="opt_argentina_recargaSaldo" data-view-name="recargasaldo"value="AR">Argentina</option>
+                                    <option data-i18n-id="opt_mexico_recargaSaldo" data-view-name="recargasaldo"value="MX">Mexico</option>
+                                    <option data-i18n-id="opt_panama_recargaSaldo" data-view-name="recargasaldo"value="PA">Panamá</option>
+                                    <option data-i18n-id="opt_repdominicana_recargaSaldo" data-view-name="recargasaldo"value="DO">Rep. Dominicana</option>
+                                    <option data-i18n-id="opt_costarica_recargaSaldo" data-view-name="recargasaldo"value="CR">Costa Rica</option>
+                                    <option data-i18n-id="opt_ecuador_recargaSaldo" data-view-name="recargasaldo"value="EC">Ecuador</option>
+                                </select>
+                            </div>
+    
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button type="button" class="btn btn-sm btn-primary btn-uppercase" id="btn-buscarpreciosplazbot-compras"><i data-feather="search"></i> <span data-i18n-id="btn_buscarprecios_recargaSaldo" data-view-name="recargasaldo">Buscar</span></button>
+                                <div class="mg-l-6">
+                                    <button id="btn-refresh-listaPrecios" type="button" class="btn btn-sm btn-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw mg-r-5"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> <span data-i18n-id="btn_refrescarprecios_recargaSaldo" data-view-name="recargasaldo">Refrescar</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer pd-b-0">
+                        <p>
+                            <span data-i18n-id="span_compraeligida_recargaSaldo" data-view-name="recargasaldo">Estas eligiendo comprar :</span> <span class="mg-l-10" id="txt-detallebusquedaetiqueta-compras"><strong>Sesiones salientes</strong> <span  data-i18n-id="span_paiselegido_recargaSaldo" data-view-name="recargasaldo">para el pais</span> <strong>Perú</strong></span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <br /><br />
+    
+            <div>
+                <div class="pos-relative">
+                    <div class="panel-cargandoregistros-oprt" id="panel-cargandolistadoprecios-compras">
+                        <div class="lds-ring">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row" id="container-listadopreciosplazbot-compras"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Modal / Confirmación compra de planes -->
+    <div class="modal fade effect-scale" id="modal-confirmacionregistropago-compras" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <section class="modal-header">
+                    <h6 data-i18n-id="h6_completarcompra_modalrecargaSaldo" data-view-name="recargasaldo" class="tx-uppercase tx-spacing-1 tx-semibold tx-13 mb-0">Completar Compra</h6>
+                    <button type="button" class="close pos-absolute t-10 r-15" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x" class="wd-20"></i></span>
+                    </button>
+                </section>
+                <div class="modal-body">
+                    <section>
+                        <div class="row">
+                            <div class="col-md-12" id="contenedor-alertarregistropagounico-compras"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pos-relative">
+                                <div id="contenedor-pagoporpaypal-compras"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="progressbar-registropagosunicos-compras" class="progress mg-t-5 mg-b-10 d-none">
+                                    <div class="progress-bar progress-bar-striped bg-primary wd-100p" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script src="/Contents/plugins/jquery/jquery.min.js"></script>
+<script src="js/recarga-saldo.js"></script>
